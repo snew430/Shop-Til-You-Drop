@@ -6,7 +6,7 @@ const { findAll } = require("../../models/Product");
 
 router.get("/", (req, res) => {
   Category.findAll({
-    attributes: ["id"],
+    attributes: ["id", "category_name"],
     include: [
       {
         model: Product,
@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   Category.findOne({
-    where: req.params.id,
+    where: { id: req.params.id },
     include: [
       {
         model: Product,
@@ -40,7 +40,6 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Category.create({
-    id: req.body.id,
     category_name: req.body.category_name,
   })
     .then((dbCategoryData) => res.json(dbCategoryData))

@@ -4,5 +4,23 @@
     "express": "^4.17.3",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "shop-til-you-drop",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snew430/Shop-Til-You-Drop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snew430/Shop-Til-You-Drop/issues"
+  },
+  "homepage": "https://github.com/snew430/Shop-Til-You-Drop#readme"
 }
